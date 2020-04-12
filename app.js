@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 76;
   let currentTime = 20;
   let timerId;
-  squares[currentIndex].classList.add('frog');
 
   function moveFrog(e) {
     squares[currentIndex].classList.remove('frog');
@@ -29,15 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
       case 40:
         if (currentIndex + width < width * width) currentIndex += width;
         break;
-      default:
-        break;
     }
-
     squares[currentIndex].classList.add('frog');
     lose();
     win();
   }
-  
+
   function autoMoveCars() {
     carsLeft.forEach((carLeft) => {
       moveCarLeft(carLeft);
@@ -61,8 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carLeft.classList.remove('c3');
         carLeft.classList.add('c1');
         break;
-      default:
-        break;
     }
   }
 
@@ -79,8 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
       case carRight.classList.contains('c3'):
         carRight.classList.remove('c3');
         carRight.classList.add('c2');
-        break;
-      default:
         break;
     }
   }
@@ -112,8 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         logLeft.classList.remove('l5');
         logLeft.classList.add('l1');
         break;
-      default:
-        break;
     }
   }
 
@@ -138,8 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
       case logRight.classList.contains('l5'):
         logRight.classList.remove('l5');
         logRight.classList.add('l4');
-        break;
-      default:
         break;
     }
   }
